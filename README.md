@@ -57,6 +57,7 @@ The Facebook toolkit makes it easy to implement a Facebook login flow through th
 1. To use Facebook, [create](https://developers.facebook.com/docs/apps/register) an application.  
 2. Then, choose the [permissions](https://developers.facebook.com/docs/facebook-login/permissions) that you need.
 3. Wire up a login flow using the middleware below.
+
 > * __redirectUrl(appId, callbackUrl, permissions, state)__ – generates the facebook.com url to which you redirect the user
 > * __getLoginHandler(appId, callbackUrl, permissions)__ – returns middleware to redirect a user to the facebook.com login page, handling CRSF state through the session infrastructure
 > * __getAccessToken(appId, appSecret, callbackUrl, code, cb)__ – requests an access token given the code received from a successful facebook login
@@ -68,6 +69,7 @@ The Facebook toolkit makes it easy to implement a Facebook login flow through th
 1. To use Google, [create](https://console.developers.google.com/projectselector/apis/library) an application.  
 2. Then, choose the [permissions](https://developers.google.com/identity/protocols/googlescopes) that you need.
 3. Wire up a login flow using the middleware below.
+
 > * __redirectUrl(appId, callbackUrl, permissions, state)__ – generates the google.com url to which you redirect the user
 > * __getLoginHandler(appId, callbackUrl, permissions)__ – returns middleware to redirect a user to the google.com login page, handling CRSF state through the session infrastructure
 > * __getAccessToken(appId, appSecret, callbackUrl, code, cb)__ – requests an access token given the code received from a successful facebook login
