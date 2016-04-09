@@ -1,13 +1,9 @@
 require("sugar");
+require("chai").should();
 
-var chai = require("chai"),
-    expect = chai.expect,
-    fs = require("fs"),
+var fs = require("fs"),
     dynq = require("dynq"),
-    pf = null,
-    config = JSON.parse(fs.readFileSync(__dirname + "/../test.json"));
-
-chai.should();
+    pf = null;
 
 describe('Module', function() {
     
@@ -22,16 +18,13 @@ describe('Module', function() {
     it("has a valid session table schema", function() {
         require(__dirname + "/../lib/model/session");
     });
-    
-    it("has a valid trail table schema", function() {
-        require(__dirname + "/../lib/model/trail");
-    });
-    
+
     it("has a valid users table schema", function() {
         require(__dirname + "/../lib/model/users");
     });
     
     var cxn = null;
+    var config = JSON.parse(fs.readFileSync(__dirname + "/config.json"));
     it("can create a connection", function() {
         cxn = require("dynq").config(config.aws).connect();
     });

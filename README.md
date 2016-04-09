@@ -41,6 +41,10 @@ app.use("/auth", pf.auth.router({
         permissions: [ ]
     }
 }));
+
+pf.init({ ... }, err => {
+    app.listen(80);
+});
 ```
 
 ## Advanced Login
@@ -114,7 +118,7 @@ The data model is pretty standard.  There are users, which have privileges/roles
 
 ```javascript
 var pf = require("pillowfort");
-pf.init({ ... }).create(err => {
+pf.init({ ... }, err => {
     var schema = pf.schema,
         users = schema.tables.users,
         logins = schema.tables.logins,
