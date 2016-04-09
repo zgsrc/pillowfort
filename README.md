@@ -20,7 +20,7 @@ app.use(pf.session.memory({ ... }));
 app.use(pf.session.dynamo(pf.schema, { ... }));
 ```
 
-## Simple Login
+## Simple
 
 Pillow Fort provides a simple mechanism to create a login system.
 
@@ -47,7 +47,7 @@ pf.init({ ... }, err => {
 });
 ```
 
-## Advanced Login
+## Advanced
 
 Pillow Fort provides multiple authentication toolkits to customize a login system.
 
