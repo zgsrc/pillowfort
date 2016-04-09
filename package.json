@@ -1,0 +1,42 @@
+{
+  "name": "pillowfort",
+  "version": "1.0.0",
+  "description": "Security framework for Node.js and AWS DynamoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triploc/pillowfort.git"
+  },
+  "keywords": [
+    "security",
+    "user",
+    "auth",
+    "authentication",
+    "authorization",
+    "privileges",
+    "roles",
+    "dynamodb",
+    "aws",
+    "middleware"
+  ],
+  "author": "Jonathan Hollinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/triploc/pillowfort/issues"
+  },
+  "homepage": "https://github.com/triploc/pillowfort#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "dynq": "^1.0.14",
+    "ejs": "^2.4.1",
+    "express-session": "^1.13.0",
+    "sugar": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
