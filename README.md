@@ -4,15 +4,11 @@
 
 Auth system building blocks backed by AWS DynamoDB.
 
-## Design
-
-DynamoDB has higher performance and better scalability than relational databases, making it a good choice for persisting a user database.  
-
-While marginally less performant, it is more scalable, durable, and manageable than in-memory cache clusters (e.g. memcached or redis), making it a similarly good choice for persisting session state.
-
-The data model is pretty standard.  There are users, which have privileges/roles and can have one or more logins.  Multiple logins let many unique identifiers (email, phone, social) all link back to the same system identity, which can be useful.
+DynamoDB has higher performance and better scalability than relational databases, making it a good choice for persisting a user data.  While marginally less performant, it is also more scalable, durable, and manageable than in-memory cache clusters (e.g. memcached or redis), making it a similarly good choice for persisting session state.
 
 ## Sessions
+
+Sessions are standard mechanism to establish identity in any client-server interaction.  Pillow Fort assumes session infrastructure is present in higher-level middleware.
 
 ```javascript
 var app = require("express")();
@@ -24,15 +20,50 @@ app.use(pf.session.memory({ ... }));
 app.use(pf.session.dynamo(pf.schema, { ... }));
 ```
 
-## Login
+## Simple Login
 
-Pillow Fort provides multiple authentication toolkits.
+Pillow Fort provides a simple mechanism to create a login system.
+
+```javascript
+app.use("/auth", pf.auth.router({
+    login: {
+        maxAttempts: 5
+    },
+    facebook: { 
+        id: "***",
+        secret: "***",
+        permissions: [ ]
+    },
+    google: { 
+        id: "xyz.apps.googleusercontent.com",
+        secret: "***",
+        apikey: "***",
+        permissions: [ ]
+    }
+}));
+```
+
+## Advanced Login
+
+Pillow Fort provides multiple authentication toolkits to customize a login system.
 
 ```javascript
 var prop = pf.auth.login,
     fb = pf.auth.facebook,
     goog = pf.auth.google;
 ```
+
+A well-considered login system has a complicated logical flow.
+
+1. A user must be registered with unique login identifiers (e.g. a username), avoiding clashes with existing identities.
+2. Passwords are employed to control access to identities.  They should be stored and challenged using an opaque mechanism.
+3. Login identifiers often double as communication channels (i.e. email or phone) whose ownership must be verified to establish trust.
+4. When passwords are forgotten, a verified communication channel is necessary to facilitate a reset.
+5. To prevent hijacking of an authenticated session, best practices requires knowledge of the current password to change the password.
+6. Successful login requires a login identifier and a password.  Depending on the user state and application requirements, additional registration steps may be required before accessing protected resources.
+7. The system must limit the number of invalid login attempts to prevent brute force attacks.  Once an maximum number of invalid login attempts is reached, an account should be "locked", preventing further login attempts until the identity is unlocked through the verified communication channel.
+
+This flow needs to be implemented and tested in full or a third-party login system (e.g. facebook or google) should be used to automatically handle many of the complexities.  Pillow Fort makes either approach (or a combination) easy.
 
 ### Proprietary
 
@@ -78,6 +109,8 @@ The Facebook toolkit makes it easy to implement a Facebook login flow through th
 ## Model
 
 Low-level operations are exposed through a data model implemented with [Dynq](http://github.com/triploc/dynq).
+
+The data model is pretty standard.  There are users, which have privileges/roles and can have one or more logins.  Multiple logins let many unique identifiers (email, phone, social) all link back to the same system identity, which can be useful.
 
 ```javascript
 var pf = require("pillowfort");
