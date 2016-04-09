@@ -69,7 +69,7 @@ A well-considered login system has a complicated logical flow.
 
 This flow needs to be implemented and tested in full or a third-party login system (e.g. facebook or google) should be used to automatically handle many of the complexities.  Pillow Fort makes either approach (or a combination) easy.
 
-### Proprietary
+#### Proprietary
 
 The proprietary toolkit uses the DynamoDB schema to power the authentication system.  
 
@@ -85,7 +85,7 @@ The proprietary toolkit uses the DynamoDB schema to power the authentication sys
 > * changePwd
 > * logout
 
-### Facebook
+#### Facebook
 
 The Facebook toolkit makes it easy to implement a Facebook login flow through the server (rather than the client).
 
@@ -99,7 +99,7 @@ The Facebook toolkit makes it easy to implement a Facebook login flow through th
 > * __getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTemplate)__ – returns middleware to handle the facebook.com callback after a login attempt
 > * __getConnectionHandler(schema)__ – returns middleware that creates/updates a login entity from a successfully retrieved access token.
 
-### Google
+#### Google
 
 1. To use Google, [create](https://console.developers.google.com/projectselector/apis/library) an application.  
 2. Then, choose the [permissions](https://developers.google.com/identity/protocols/googlescopes) that you need.
@@ -126,7 +126,7 @@ pf.init({ ... }, err => {
 });
 ```
 
-### Users
+#### Users
 
 * create(user, cb)
 * modify(user, cb)
@@ -141,7 +141,7 @@ pf.init({ ... }, err => {
 * grant(id, role, cb)
 * rescind(id, role, cb)
 
-### Logins
+#### Logins
 
 * forUser(user, cb)
 * claim(id, cb)
@@ -150,7 +150,7 @@ pf.init({ ... }, err => {
 * bind(login, user, cb)
 * free(login, cb)
 
-### Sessions
+#### Sessions
 
 * destroySession(sid, cb)
 * getSession(sid, cb)
