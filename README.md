@@ -109,7 +109,7 @@ social.getConnectionHandler(schema);
 
 ##### AOL
 
-1. Obtain an AOL client id and secret.
+1. [Obtain an AOL client id and secret](http://help.reader.aol.com/knowledgebase).
 2. Wire up a login flow using middleware in the `pf.auth.aol` toolkit.
 
 ##### Box
@@ -163,6 +163,12 @@ social.getConnectionHandler(schema);
 1. To use Salesforce, [create an application](https://developer.salesforce.com/signup).
 2. Then, [choose the permissions](https://help.salesforce.com/apex/HTViewHelpDoc?id=remoteaccess_oauth_scopes.htm) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.salesforce` toolkit.
+
+##### Slack
+
+1. To use Slack, [create an application](https://api.slack.com/applications).
+2. Then, [choose the permissions](https://api.slack.com/docs/oauth-scopes) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.slack` toolkit.
 
 ##### VK
 
