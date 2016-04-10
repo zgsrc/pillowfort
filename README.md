@@ -50,15 +50,7 @@ The `router` method creates a [`gencall`](http://github.com/triploc/gencall) rou
 
 ## Advanced
 
-Pillow Fort provides multiple authentication toolkits to customize a login system.
-
-```javascript
-var prop = pf.auth.login,
-    fb = pf.auth.facebook,
-    goog = pf.auth.google;
-```
-
-A well-considered login system has a complicated logical flow.
+Pillow Fort provides multiple authentication toolkits to customize a login system.  A well-considered login system has a complicated logical flow.
 
 1. A user must be registered with unique login identifiers (e.g. a username), avoiding clashes with existing identities.
 2. Passwords are employed to control access to identities.  They should be stored and challenged using an opaque mechanism.
@@ -90,25 +82,25 @@ The proprietary toolkit uses the DynamoDB schema to power the authentication sys
 
 Pillow Fort comes with OAuth login toolkits for a variety of services.  Each toolkit follows the basic interface set out below.
 
-* __redirectUrl(appId, callbackUrl, permissions, state)__
+__redirectUrl(appId, callbackUrl, permissions, state)__
 
-> generates the facebook.com url to which you redirect the user
+    generates the facebook.com url to which you redirect the user
 
-* __getLoginHandler(appId, callbackUrl, permissions)__ 
+__getLoginHandler(appId, callbackUrl, permissions)__ 
 
-> returns middleware to redirect a user to the facebook.com login page, handling CRSF state through the session infrastructure
+    returns middleware to redirect a user to the facebook.com login page, handling CRSF state through the session infrastructure
 
-* __getAccessToken(appId, appSecret, callbackUrl, code, cb)__ 
+__getAccessToken(appId, appSecret, callbackUrl, code, cb)__ 
 
-> requests an access token given the code received from a successful facebook login
+    requests an access token given the code received from a successful facebook login
 
-* __getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTemplate)__ 
+__getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTemplate)__ 
 
-> returns middleware to handle the facebook.com callback after a login attempt
+    returns middleware to handle the facebook.com callback after a login attempt
 
-* __getConnectionHandler(schema)__ 
+__getConnectionHandler(schema)__ 
 
-> returns middleware that creates/updates a login entity from a successfully retrieved access token.
+    returns middleware that creates/updates a login entity from a successfully retrieved access token.
 
 ##### Facebook
 
