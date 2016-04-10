@@ -33,6 +33,7 @@
     "dynq": "^1.0.14",
     "ejs": "^2.4.1",
     "express-session": "^1.13.0",
+    "request": "^2.70.0",
     "sugar": "^1.4.1"
   },
   "devDependencies": {

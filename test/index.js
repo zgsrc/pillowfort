@@ -23,6 +23,7 @@ describe('Module', function() {
         require(__dirname + "/../lib/model/users");
     });
     
+    /*
     var cxn = null;
     var config = JSON.parse(fs.readFileSync(__dirname + "/config.json"));
     it("can create a connection", function() {
@@ -52,5 +53,6 @@ describe('Module', function() {
         }
         else done();
     })
+    */
     
 });
