@@ -46,7 +46,7 @@ pf.init({ ... }, err => {
 });
 ```
 
-The `router` method creates a [`gencall`](http://github.com/triploc/gencall) router to help with parameter validation.  To enable all `gencall` functionality, use the `mount` method rather than the traditional `app.use` call.
+The `router` method creates a [`gencall.router`](http://github.com/triploc/gencall) router to help with parameter validation.  To enable all gencall functionality, use the `gencall.router.mount` method rather than the traditional `app.use` call.
 
 ## Advanced
 
@@ -115,6 +115,12 @@ social.connectMiddleware(schema);
 1. [Obtain an AOL client id and secret](http://help.reader.aol.com/knowledgebase).
 2. Wire up a login flow using middleware in the `pf.auth.aol` toolkit.
 
+##### Baidu
+
+1. To use Baidu, [create an application](http://developer.baidu.com/wiki/index.php?title=docs/pcs/guide/app_create).
+2. Then, [choose the permissions](http://developer.baidu.com/wiki/index.php?title=docs/oauth) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.baidu` toolkit.
+
 ##### Box
 
 1. To use Box, [create an application](https://app.box.com/developers/services).
@@ -161,6 +167,18 @@ social.connectMiddleware(schema);
 2. Then, [choose the permissions](https://msdn.microsoft.com/en-us/library/hh243646.aspx) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.microsoft` toolkit.
 
+##### Pinterest
+
+1. To use Pinterest, [create an application](https://developers.pinterest.com/apps/).
+2. Then, [choose the permissions](https://developers.pinterest.com/docs/api/overview/#scopes) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.pinterest` toolkit.
+
+##### QQ
+
+1. To use QQ, [create an application](#).
+2. Then, [choose the permissions](#) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.qq` toolkit.
+
 ##### Salesforce
 
 1. To use Salesforce, [create an application](https://developer.salesforce.com/signup).
@@ -173,11 +191,23 @@ social.connectMiddleware(schema);
 2. Then, [choose the permissions](https://api.slack.com/docs/oauth-scopes) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.slack` toolkit.
 
+##### Taobao
+
+1. To use Slack, [create an application](#).
+2. Then, [choose the permissions](#) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.taobao` toolkit.
+
 ##### VK
 
 1. To use VK, [create an application](https://vk.com/apps?act=manage).
 2. Then, [choose the permissions](https://vk.com/dev/permissions) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.vk` toolkit.
+
+##### WordPress
+
+1. To use WordPress, [create an application](#).
+2. Then, [choose the permissions](#) that you need.
+3. Wire up a login flow using middleware in the `pf.auth.wordpress` toolkit.
 
 ##### Yahoo
 
