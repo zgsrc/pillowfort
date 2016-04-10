@@ -103,17 +103,15 @@ social.getConnectionHandler(schema);
 
 ##### Facebook
 
-The Facebook toolkit makes it easy to implement a Facebook login flow through the server (rather than the client).
-
 1. To use Facebook, [create](https://developers.facebook.com/docs/apps/register) an application.  
 2. Then, choose the [permissions](https://developers.facebook.com/docs/facebook-login/permissions) that you need.
-3. Wire up a login flow using the middleware below.
+3. Wire up a login flow using the middleware in the `pf.auth.facebook` toolkit.
 
 ##### Google
 
 1. To use Google, [create](https://console.developers.google.com/projectselector/apis/library) an application.  
 2. Then, choose the [permissions](https://developers.google.com/identity/protocols/googlescopes) that you need.
-3. Wire up a login flow using the middleware below.
+3. Wire up a login flow using the middleware in the `pf.auth.google` toolkit.
     
 ## Model
 
