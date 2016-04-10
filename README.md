@@ -82,22 +82,24 @@ The proprietary toolkit uses the DynamoDB schema to power the authentication sys
 
 Pillow Fort comes with OAuth login toolkits for a variety of services.  Each toolkit follows the basic interface set out below.
 
-__redirectUrl(appId, callbackUrl, permissions, state)__
-> generates the facebook.com url to which you redirect the user
+```javascript
+var social = pf.auth.facebook;
 
-__getLoginHandler(appId, callbackUrl, permissions)__ 
-> returns middleware to redirect a user to the facebook.com login page, handling CRSF state through the session infrastructure
+// Generates the url to which you redirect the user
+social.redirectUrl(appId, callbackUrl, permissions, state);
 
-__getAccessToken(appId, appSecret, callbackUrl, code, cb)__ 
-> requests an access token given the code received from a successful facebook login
+// Returns middleware handling the redirect and CRSF state via the session infrastructure
+social.getLoginHandler(appId, callbackUrl, permissions);
 
-__getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTemplate)__ 
-> returns middleware to handle the facebook.com callback after a login attempt
+// Requests an access token given the code received from a successful facebook login
+social.getAccessToken(appId, appSecret, callbackUrl, code, cb);
 
-__getConnectionHandler(schema)__ 
-> returns middleware that creates/updates a login entity from a successfully retrieved access token.
+// Returns middleware to handle the facebook.com callback after a login attempt
+social.getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTemplate);
 
----
+// Returns middleware that creates/updates a login entity from a successfully retrieved access token.
+social.getConnectionHandler(schema);
+```
 
 ##### Facebook
 
