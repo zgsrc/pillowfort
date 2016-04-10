@@ -69,14 +69,14 @@ The proprietary toolkit uses the DynamoDB schema to power the authentication sys
 1. To use the proprietary system, configure it to your specifications.
 2. Use the middleware (i.e. `function(req, res, next)`) to piece together a login system.
 
-> * config(options)
-> * register
-> * login
-> * verify
-> * forgotPwd
-> * resetPwd
-> * changePwd
-> * logout
+* config(options)
+* register
+* login
+* verify
+* forgotPwd
+* resetPwd
+* changePwd
+* logout
 
 #### Social
 
@@ -96,6 +96,8 @@ __getCallbackHandler(appId, appSecret, callbackUrl, successTemplate, errorTempla
 
 __getConnectionHandler(schema)__ 
 > returns middleware that creates/updates a login entity from a successfully retrieved access token.
+
+---
 
 ##### Facebook
 
