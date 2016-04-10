@@ -103,8 +103,8 @@ social.getConnectionHandler(schema);
 
 ##### Amazon
 
-1. To use Amazon, [create](http://login.amazon.com/manageApps) an application.  
-2. Then, choose the [permissions](https://developer.amazon.com/public/apis/engage/login-with-amazon/docs/customer_profile.html) that you need.
+1. To use Amazon, [create an application](http://login.amazon.com/manageApps).
+2. Then, [choose the permissions](https://developer.amazon.com/public/apis/engage/login-with-amazon/docs/customer_profile.html) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.amazon` toolkit.
 
 ##### AOL
@@ -114,78 +114,78 @@ social.getConnectionHandler(schema);
 
 ##### Box
 
-1. To use Box, [create](https://app.box.com/developers/services) an application.  
+1. To use Box, [create an application](https://app.box.com/developers/services).
 2. Wire up a login flow using middleware in the `pf.auth.box` toolkit.
 
 ##### Dropbox
 
-1. To use Dropbox, [create](https://www.dropbox.com/developers/apps/create) an application.  
+1. To use Dropbox, [create an application](https://www.dropbox.com/developers/apps/create).
 2. Wire up a login flow using middleware in the `pf.auth.dropbox` toolkit.
 
 ##### Facebook
 
-1. To use Facebook, [create](https://developers.facebook.com/docs/apps/register) an application.  
-2. Then, choose the [permissions](https://developers.facebook.com/docs/facebook-login/permissions) that you need.
+1. To use Facebook, [create an application](https://developers.facebook.com/docs/apps/register).
+2. Then, [choose the permissions](https://developers.facebook.com/docs/facebook-login/permissions) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.facebook` toolkit.
 
 ##### Github
 
-1. To use Github, [create](https://github.com/settings/applications/new) an application.  
-2. Then, choose the [permissions](https://developer.github.com/v3/oauth/#scopes) that you need.
+1. To use Github, [create an application](https://github.com/settings/applications/new).
+2. Then, [choose the permissions](https://developer.github.com/v3/oauth/#scopes) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.github` toolkit.
 
 ##### Google
 
-1. To use Google, [create](https://console.developers.google.com/projectselector/apis/library) an application.  
-2. Then, choose the [permissions](https://developers.google.com/identity/protocols/googlescopes) that you need.
+1. To use Google, [create an application](https://console.developers.google.com/projectselector/apis/library).
+2. Then, [choose the permissions](https://developers.google.com/identity/protocols/googlescopes) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.google` toolkit.
 
 ##### Instagram
 
-1. To use Instagram, [create](https://www.instagram.com/developer/clients/manage/) an application.  
-2. Then, choose the [permissions](https://www.instagram.com/developer/authorization/) that you need.
+1. To use Instagram, [create an application](https://www.instagram.com/developer/clients/manage/).
+2. Then, [choose the permissions](https://www.instagram.com/developer/authorization/) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.instagram` toolkit.
 
 ##### LinkedIn
 
-1. To use LinkedIn, [create](https://www.linkedin.com/secure/developer?newapp=) an application.  
-2. Then, choose the [permissions](https://developer.linkedin.com/docs/fields) that you need.
+1. To use LinkedIn, [create an application](https://www.linkedin.com/secure/developer?newapp=).
+2. Then, [choose the permissions](https://developer.linkedin.com/docs/fields) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.linkedin` toolkit.
 
 ##### Microsoft
 
-1. To use Microsoft, [create](https://apps.dev.microsoft.com/Disambiguation?ru=https%3a%2f%2fapps.dev.microsoft.com%2f) an application.  
-2. Then, choose the [permissions](https://msdn.microsoft.com/en-us/library/hh243646.aspx) that you need.
+1. To use Microsoft, [create an application](https://apps.dev.microsoft.com/Disambiguation?ru=https%3a%2f%2fapps.dev.microsoft.com%2f).
+2. Then, [choose the permissions](https://msdn.microsoft.com/en-us/library/hh243646.aspx) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.microsoft` toolkit.
 
 ##### Salesforce
 
-1. To use Salesforce, [create](https://developer.salesforce.com/signup) an application.  
-2. Then, choose the [permissions](https://help.salesforce.com/apex/HTViewHelpDoc?id=remoteaccess_oauth_scopes.htm) that you need.
+1. To use Salesforce, [create an application](https://developer.salesforce.com/signup).
+2. Then, [choose the permissions](https://help.salesforce.com/apex/HTViewHelpDoc?id=remoteaccess_oauth_scopes.htm) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.salesforce` toolkit.
 
 ##### VK
 
-1. To use VK, [create](https://vk.com/apps?act=manage) an application.  
-2. Then, choose the [permissions](https://vk.com/dev/permissions) that you need.
+1. To use VK, [create an application](https://vk.com/apps?act=manage).
+2. Then, [choose the permissions](https://vk.com/dev/permissions) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.vk` toolkit.
 
 ##### Yahoo
 
-1. To use Yahoo, [create](https://developer.yahoo.com/apps/create/) an application.  
-2. Then, choose the [permissions](https://developer.yahoo.com/oauth2/guide/yahoo_scopes/) that you need.
+1. To use Yahoo, [create an application](https://developer.yahoo.com/apps/create/).
+2. Then, [choose the permissions](https://developer.yahoo.com/oauth2/guide/yahoo_scopes/) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.yahoo` toolkit.
 
 ##### Yammer
 
-1. To use Yammer, [create](https://www.yammer.com/client_applications) an application.  
-2. Then, choose the [permissions](https://msdn.microsoft.com/office/office365/howto/application-manifest#AppManifest_YammerScopes) that you need.
+1. To use Yammer, [create an application](https://www.yammer.com/client_applications).
+2. Then, [choose the permissions](https://msdn.microsoft.com/office/office365/howto/application-manifest#AppManifest_YammerScopes) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.yammer` toolkit.
 
 ##### Yandex
 
-1. To use Yandex, [create](https://oauth.yandex.com/client/new) an application.  
-2. Then, choose the [permissions](https://tech.yandex.com/money/doc/dg/concepts/protocol-rights-docpage/) that you need.
+1. To use Yandex, [create an application](https://oauth.yandex.com/client/new).
+2. Then, [choose the permissions](https://tech.yandex.com/money/doc/dg/concepts/protocol-rights-docpage/) that you need.
 3. Wire up a login flow using middleware in the `pf.auth.yandex` toolkit.
     
 ## Model
