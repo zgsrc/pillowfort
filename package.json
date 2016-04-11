@@ -30,7 +30,7 @@
   "homepage": "https://github.com/triploc/pillowfort#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "dynq": "^1.0.14",
+    "dynq": "^1.0.23",
     "ejs": "^2.4.1",
     "express-session": "^1.13.0",
     "request": "^2.70.0",
